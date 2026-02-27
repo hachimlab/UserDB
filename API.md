@@ -30,7 +30,7 @@
 
 |     key     |         value          |  type  |
 | :---------: | :--------------------: | :----: |
-|     id      |           ID           |  int   |
+|     id      |           训练师编号           |  int   |
 |  nickname   |          昵称          | string |
 |     sex     | 性别（0 为女，1 为男） |  int   |
 | description |        自我描述        | string |
@@ -43,3 +43,46 @@
 |     attention_total      |           关注数量           |  int   |
 |     fans_total      |           粉丝数量           |  int   |
 |     work_shop_name      |           工作室名称           |  string   |
+
+- 此昵称无结果时，返回状态码为 `404`: `{"status":"not found"}`
+
+## 添加用户
+
+`GET` `/user/add`
+
+| **KEY**  |     **VALUE**      | **TYPE** | **NEED** |
+| :------: | :----------------: | :------: | :------: |
+|   id    |        训练师编号      |  int  |   必须   |
+
+### 返回内容
+
+- 成功请求时，返回状态码为 `200`
+
+`{"status":"ok","message":"用户已收录"}`
+
+- 用户如果已被收录，返回状态码 `409`
+
+`{"status":"exist","message":"已收录过此用户"}`
+
+- 用户如果疑似EDU账户，返回状态码 `422`
+
+`{"status":"edu","message":"此账号疑似EDU批量注册"}`
+
+## 更新用户信息
+
+`GET` `/user/update`
+
+| **KEY**  |     **VALUE**      | **TYPE** | **NEED** |
+| :------: | :----------------: | :------: | :------: |
+|   id    |        训练师编号      |  int  |   必须   |
+
+### 返回内容
+
+- 成功请求时，返回状态码为 `200`
+
+`{"status":"ok","message":"用户信息已更新"}`
+
+
+- 未收录此ID时，返回状态码为 `404`
+
+`{"status":"not found","message":"找不到此用户"}`
