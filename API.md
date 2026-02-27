@@ -1,0 +1,45 @@
+# API服务
+
+**我们已提供公共API，架设在美国虚拟主机，未做任何人机验证等限制，请手下留情**
+
+## URL
+
+`https://udbapi.hachimlab.top`
+
+## 查询用户
+
+`GET` `/search`
+
+| **KEY**  |     **VALUE**      | **TYPE** | **NEED** |
+| :------: | :----------------: | :------: | :------: |
+|   nickname    |       昵称       |  string  |   必须   |
+| page | 分页 |  int  |   可选   |
+| limit |        每页的结果数量        |  int  |   可选   |
+
+### 返回内容
+
+- 成功请求时，返回状态码为 `200`
+
+|  **KEY**  |    **VALUE**     | **TYPE** |
+| :-------: | :--------------: | :------: |
+| status | 状态 |   string   |
+|   user    | 查询到的用户数量 |   int   |
+|   item    | 查询到的用户（列表） |   json   |
+
+### item
+
+|     key     |         value          |  type  |
+| :---------: | :--------------------: | :----: |
+|     id      |           ID           |  int   |
+|  nickname   |          昵称          | string |
+|     sex     | 性别（0 为女，1 为男） |  int   |
+| description |        自我描述        | string |
+| doing |        正在做什么        | string |
+| avatar_url  |        头像链接        | string |
+|     collectionTimes      |           作品被收藏次数           |  int   |
+|     forkedTimes      |           作品被再创作次数           |  int   |
+|     praiseTimes      |           作品被点赞次数           |  int   |
+|     viewTimes      |           作品被浏览次数           |  int   |
+|     attention_total      |           关注数量           |  int   |
+|     fans_total      |           粉丝数量           |  int   |
+|     work_shop_name      |           工作室名称           |  string   |
