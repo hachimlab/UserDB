@@ -4,7 +4,7 @@
 
 公共API服务：https://udbapi.hachimlab.top/
 
-(社区集成油猴插件)[https://greasyfork.org/zh-CN/scripts/567810-codemaouserdb-%E7%A4%BE%E5%8C%BA%E9%9B%86%E6%88%90%E6%8F%92%E4%BB%B6-%E7%BC%96%E7%A8%8B%E7%8C%AB%E6%98%B5%E7%A7%B0%E6%90%9C%E7%B4%A2]
+[社区集成油猴插件](https://greasyfork.org/zh-CN/scripts/567810-codemaouserdb-%E7%A4%BE%E5%8C%BA%E9%9B%86%E6%88%90%E6%8F%92%E4%BB%B6-%E7%BC%96%E7%A8%8B%E7%8C%AB%E6%98%B5%E7%A7%B0%E6%90%9C%E7%B4%A2)
 
 ## 什么是UserDB？
 
