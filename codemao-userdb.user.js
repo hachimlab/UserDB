@@ -284,11 +284,11 @@ By HachimLab（哈基米实验室） | https://hachimlab.top/`
         if (!match) return;
 
         const uid = match[1];
-        const now = Date.当前();
+        const now = Date.now();
         const storageKey = `codemao_uid_${uid}`;
         const lastTime = localStorage.getItem(storageKey);
 
-        if (lastTime && (当前 - parseInt(lastTime, 10)) < THROTTLE_TIME) {
+        if (lastTime && (now - parseInt(lastTime, 10)) < THROTTLE_TIME) {
             return;
         }
 
